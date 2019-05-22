@@ -55,11 +55,11 @@
                 <li id="club_zixun_2"><a href="{% url 'show_act' %}">活动资讯</a></li>
                 {% endif %}
                 {% if user.myuser.permission > 1 %}
-                    <li id="add_book"><a href="{% url 'add_book' %}">添加社团</a></li>
+                    <li id="add_book"><a href="{% url 'add_club' %}">添加社团</a></li>
                     <li id="add_img"><a href="{% url 'add_img' %}">添加社团图片</a></li>
                     <li id="change_club"><a href="{% url 'change_club' user.myuser.uid %}">查看社团成员</a></li>
                 {% endif %}
-                <li id="view_book"><a href="{% url 'view_book_list' %}">查看社团</a></li>
+                <li id="view_club"><a href="{% url 'view_club_list' %}">查看社团</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if user %}

@@ -103,7 +103,7 @@ def set_password(request):
 
 
 @user_passes_test(permission_check)
-def add_book(request):
+def add_club(request):
     user = request.user
     state = None
     if request.method == 'POST':
@@ -122,10 +122,10 @@ def add_book(request):
         'active_menu': 'add_book',
         'state': state,
     }
-    return render(request, 'management/add_book.html', content)
+    return render(request, 'management/add_club.html', content)
 
 
-def view_book_list(request):
+def view_club_list(request):
     user = request.user if request.user.is_authenticated() else None
     # category_list = Club.objects.values_list('category', flat=True).distinct()
     # print(category_list)
@@ -173,7 +173,7 @@ def view_book_list(request):
         'query_category': query_category,
         'book_list': book_list,
     }
-    return render(request, 'management/view_book_list.html', content)
+    return render(request, 'management/view_club_list.html', content)
 
 
 def detail(request):

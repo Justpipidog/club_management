@@ -1,6 +1,6 @@
 {% extends "management/base.html" %}
 {% load staticfiles %}
-{% block title %}查看图书{% endblock %}
+{% block title %}查看社团{% endblock %}
 
 {% block content %}
 
@@ -9,11 +9,11 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="col-md-2">
                     <div class="list-group">
-                        <a href="{% url 'view_book_list' %}" class="list-group-item" id="id_category_all">
+                        <a href="{% url 'view_club_list' %}" class="list-group-item" id="id_category_all">
                             社团分类
                         </a>
                         {% for category in category_list %}
-                            <a href="{% url 'view_book_list' %}?category={{ category }}" class="list-group-item"
+                            <a href="{% url 'view_club_list' %}?category={{ category }}" class="list-group-item"
                                id="id_category_{{ category }}">
                                 {{ category}}
                             </a>

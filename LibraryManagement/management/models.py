@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class MyUser(models.Model):
     user = models.OneToOneField(User)
     nickname = models.CharField(max_length=16)
-    uid = models.IntegerField(max_length=11, default=0)
+    uid = models.IntegerField( default=0)
     permission = models.IntegerField(default=1)
     user_state = models.IntegerField(default=1)
 

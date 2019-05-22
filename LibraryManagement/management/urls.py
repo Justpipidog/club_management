@@ -7,10 +7,10 @@ urlpatterns = [
     url(r'^login/$', views.login, name='login'),
     url(r'^logout/$', views.logout, name='logout'),
     url(r'^set_password/$', views.set_password, name='set_password'),
-    url(r'^add_book/$', views.add_book, name='add_book'),
+    # url(r'^add_club/$', views.myadmin_add_club(), name='add_book'),
     url(r'^add_img/$', views.add_img, name='add_img'),
-    url(r'^view_book_list/$', views.view_book_list, name='view_book_list'),
-    url(r'^view_book/detail/$', views.detail, name='detail'),
+    url(r'^view_club_list/$', views.view_club_list, name='view_club_list'),
+    url(r'^view_club/detail/$', views.detail, name='detail'),
 
     url(r'^join_club/(?P<uid>[0-9]+)$', views.join_club, name='join_club'),
     url(r'^user_show/(?P<id>[0-9]+)$', views.user_show, name='user_show'),
